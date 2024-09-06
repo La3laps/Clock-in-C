@@ -14,6 +14,7 @@ int main(int argc, char *argv[])
     if (minute > 60 || minute < 1)
     {
         system("clear");
+        printf("\033[0;36m");
         printf("Please select a valid number of minutes.\n");
         return 0;
     }
@@ -23,7 +24,7 @@ int main(int argc, char *argv[])
         // clear output screen
         system("clear");
         // print time in HH : MM : SS format
-        printf("%02d : %02d : %02d\n", hour, minute, second);
+        printf("\n\t%02d : %02d : %02d\n", hour, minute, second);
         // clear output buffer in gcc
         fflush(stdout);
         // descrease second
@@ -32,6 +33,7 @@ int main(int argc, char *argv[])
         if (hour == 0 && minute == 0 && second == -1)
         {
             system("clear");
+            printf("\033[0;36m");
             printf("Time is up !\n");
             return 0;
         }
